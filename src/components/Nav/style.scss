@@ -1,0 +1,31 @@
+@import "../../fn";
+
+.cp-nav{
+  &__inner{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    height: 80px;
+    line-height: 80px;
+    background-color: #ff8331;
+    color:#fff;
+    display: flex;
+  }
+  &__menu{
+    i{
+      color:#fff;
+      @include iconfont('\e790');
+    }
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  &__content{
+    flex: 1;
+  }
+  &__sitting{
+    height: 80px;
+  }
+}

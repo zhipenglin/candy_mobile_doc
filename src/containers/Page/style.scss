@@ -1,0 +1,13 @@
+.ct-page{
+  padding: 20px;
+  &__title{
+    font-size: 32px;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+  &__des{
+    font-size: 30px;
+    padding: 10px;
+    background: #e8e8e8;
+  }
+}

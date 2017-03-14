@@ -1,0 +1,10 @@
+@mixin iconfont($code){
+  font-size: 40px;
+  font-family:"iconfont" !important;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:after{
+    content:$code;
+  }
+}
