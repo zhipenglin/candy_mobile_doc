@@ -1,6 +1,6 @@
 import {PureComponent} from 'react'
 import {connect} from 'react-redux'
-import Nav from '../../components/Nav'
+import Nav from '../Nav'
 import classnames from 'classnames'
 import {navSwitch} from '../../actions/navAction'
 import './style.scss'

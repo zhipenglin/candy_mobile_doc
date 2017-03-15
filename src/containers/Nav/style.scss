@@ -2,14 +2,15 @@
 
 .cp-nav{
   &__inner{
-    position: absolute;
+    position: fixed;
+    z-index: 999;
     top:0;
     left: 0;
     width: 100%;
     text-align: center;
     font-size: 30px;
-    height: 80px;
-    line-height: 80px;
+    height: 100px;
+    line-height: 100px;
     background-color: #ff8331;
     color:#fff;
     display: flex;
@@ -19,6 +20,8 @@
       color:#fff;
       @include iconfont('\e790');
     }
+    width: 100px;
+    height: 100px;
     border-radius: 10px;
     overflow: hidden;
   }
@@ -26,6 +29,10 @@
     flex: 1;
   }
   &__sitting{
-    height: 80px;
+    height: 100px;
+  }
+  &__right,&__left{
+    width: 100px;
+    height: 100px;
   }
 }

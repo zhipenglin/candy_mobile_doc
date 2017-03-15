@@ -45,7 +45,7 @@ module.exports={
         react:['react','react-dom','react-redux','redux','redux-thunk','redux-logger',],
         'react-router':['react-router','react-router-redux'],
         'candy-mobile':'candy-mobile',
-        common:['classnames']
+        common:['classnames','isomorphic-fetch','query-string']
     },
     output:{
         path:distPath,
@@ -99,12 +99,12 @@ module.exports={
     devServer:{
         host:'0.0.0.0',
         proxy:{
-            '/api':{
+            /*'/api':{
                 target:'http://m.bole.ifchange.com',
                 pathRewrite: {'^/api' : ''},
                 secure: false,
                 changeOrigin: true
-            }
+            }*/
         }
     }
 };

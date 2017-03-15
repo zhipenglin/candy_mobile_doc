@@ -1,0 +1,8 @@
+{
+  "err_no":0,
+  "results":[
+    {"path":"/button","text":"按钮"},
+    {"path":"/dialog","text":"弹出框"},
+    {"path":"/list","text":"列表"}
+  ]
+}
