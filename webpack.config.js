@@ -74,17 +74,15 @@ module.exports={
                     use: ["css-loader","px2rem-loader", "sass-loader"],
                     publicPath: distPath
                 })
-            },
-            {
-                test: /\.png$/,
-                use: 'file-loader?name=[md5:hash:base64:10].[ext]&limit=50000'
-            }, {
-                test: /\.jpg$/,
-                use: 'file-loader?name=[md5:hash:base64:10].[ext]&limit=50000'
-            },
-            {
-                test: /\.gif$/,
-                use: 'file-loader?name=[name].[ext]&limit=50000'
+            },{
+                test:/\.(png|jpg|svg|gif)$/,
+                use:{
+                    loader:'url-loader',
+                    options:{
+                        limit:50000,
+                        name:'images/[name].[ext]'
+                    }
+                }
             }, {
                 test: /\.json$/,
                 use: 'json'
