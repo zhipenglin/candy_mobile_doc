@@ -89,9 +89,6 @@ module.exports={
             }, {
                 test: /\.md$/,
                 use: 'file-loader?name=[name].[ext]'
-            }, {
-                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-                use: 'url-loader?limit=10000&mimetype=image/svg+xml'
             }
         ]
     },
