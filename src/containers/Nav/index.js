@@ -1,4 +1,5 @@
 import {PureComponent} from 'react'
+import {connect} from 'react-redux'
 import {Button,Drawer} from 'candy-mobile'
 import Menu from '../../components/Menu'
 import load from '../../hoc/load'
@@ -38,6 +39,10 @@ class MenuButton extends PureComponent{
     }
 }
 
+@connect((state={})=>{
+    const {nav}=state;
+    return nav;
+})
 export default class Nav extends PureComponent{
     render(){
         return this.props.show?(

@@ -3,7 +3,7 @@ import query from 'query-string'
 
 const newFetch=function(url,options){
     //`/candy_mobile_doc/api${url}`
-    return fetch(`/candy_mobile_doc/api${url}`,Object.assign({
+    return fetch(`/api${url}`,Object.assign({
         credentials: 'include',
         headers: {'Content-Type':'application/x-www-form-urlencoded'}
     },options)).then(response => response.json(),(err)=>{

@@ -1,6 +1,5 @@
 import {PureComponent} from 'react'
 import {connect} from 'react-redux'
-import Nav from '../Nav'
 import classnames from 'classnames'
 import {navSwitch} from '../../actions/navAction'
 import './style.scss'
@@ -20,10 +19,9 @@ export default class Page extends PureComponent{
         }
     }
     render(){
-        const {nav,name,history,children}=this.props;
+        const {name,children}=this.props;
         return (
             <div className={classnames("ct-page",{[`ct-page--${name}`]:name})}>
-                <Nav show={nav.show}></Nav>
                 <div className="ct-page__content">
                     {children}
                 </div>

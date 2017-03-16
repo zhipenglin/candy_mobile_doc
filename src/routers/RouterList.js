@@ -1,6 +1,10 @@
 import React,{PureComponent} from 'react'
 import{matchPath,withRouter,Route} from 'react-router'
+import {connect} from 'react-redux'
 import {Toast} from 'candy-mobile'
+import {loadingStart,loadingEnd} from '../actions/loadingAction'
+
+@connect()
 @withRouter
 export default class RouterList extends PureComponent{
     state={
@@ -19,10 +23,12 @@ export default class RouterList extends PureComponent{
         const matchComponent=React.Children.toArray(children).find((item)=>{
             return matchPath(location.pathname,item.props);
         });
+        const {dispatch}=this.props;
         if(matchComponent){
             if(typeof matchComponent.props.render=='function'){
                 let component=matchComponent.props.render();
                 if(typeof component.then=='function'){
+                    dispatch(loadingStart());
                     this.setState({
                         activeComponent: null
                     });
@@ -30,6 +36,7 @@ export default class RouterList extends PureComponent{
                         this.setState({
                             activeComponent: mod.default ? mod.default : mod
                         });
+                        dispatch(loadingEnd());
                     });
                 }else{
                     this.setState({
@@ -44,7 +51,10 @@ export default class RouterList extends PureComponent{
         }
     }
     shouldComponentUpdate({location},{activeComponent}){
-        return activeComponent;
+        return activeComponent&&this.state.activeComponent!==activeComponent;
+    }
+    componentDidUpdate(){
+        window.scrollTo(0, 0);
     }
     render(){
         const {activeComponent}=this.state;

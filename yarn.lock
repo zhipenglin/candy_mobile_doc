@@ -3668,6 +3668,16 @@ rc-tween-one@^0.11.11:
     style-utils "~0.1.13"
     tween-functions "~1.2.0"
 
+rc-tween-one@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/rc-tween-one/-/rc-tween-one-1.1.2.tgz#1411ebbf0c6ec6f2717e42674d078f1f4b3e7907"
+  dependencies:
+    babel-runtime "6.x"
+    deep-eql "~2.0.1"
+    raf "~3.3.0"
+    style-utils "~0.1.13"
+    tween-functions "~1.2.0"
+
 rc@~1.1.6:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.1.7.tgz#c5ea564bb07aff9fd3a5b32e906c1d3a65940fea"

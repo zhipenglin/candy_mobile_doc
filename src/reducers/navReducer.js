@@ -1,4 +1,4 @@
-import {NAV_SWITCH,navSwitch} from '../actions/navAction'
+import {NAV_SWITCH} from '../actions/navAction'
 export default function(state={},action){
     switch (action.type){
         case NAV_SWITCH:

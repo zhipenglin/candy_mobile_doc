@@ -49,7 +49,7 @@ module.exports={
     },
     output:{
         path:distPath,
-        filename:'[name].js'
+        filename:'[name].[hash:6].js'
     },
     module:{
         rules:[

@@ -2,9 +2,10 @@ import {combineReducers} from 'redux'
 import {routerReducer} from 'react-router-redux'
 import nav from './navReducer'
 import menuList from './menuListReducer'
+import loading from './loadingReducer'
 
 const rootReducer=combineReducers({
-    nav,menuList,
+    nav,menuList,loading,
     router:routerReducer
 });
 

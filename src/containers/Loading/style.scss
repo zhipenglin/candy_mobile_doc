@@ -1,0 +1,12 @@
+.ct-loading{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  z-index: 1000;
+  &__item{
+    width: 0%;
+    background-color: rgb(28,188,48);
+    height: 8px;
+  }
+}
