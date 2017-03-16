@@ -1,18 +1,17 @@
 import {Route,Switch,Redirect} from 'react-router'
 import Home from '../containers/Home'
 import Page404 from '../containers/404'
-import Button from './Button'
-import Dialog from './Dialog'
-import List from './List'
+import RouterList from './RouterList'
+
 export default (props)=>{
+    //注意：RouterList里面的Route必须有render方法，并且只会执行render进行页面渲染
     return (
-        <Switch>
-            <Route exact path="/" component={Home}></Route>
-            <Route path="/button" component={Button}></Route>
-            <Route path="/dialog" component={Dialog}></Route>
-            <Route path="/list" component={List}></Route>
-            <Route path="/404" component={Page404}></Route>
-            <Route component={Page404}></Route>
-        </Switch>
+        <RouterList>
+            <Route exact path="/" render={()=>Home}></Route>
+            <Route path="/button" render={()=>import('../containers/Button')}></Route>
+            <Route path="/dialog" render={()=>import('../containers/Dialog')}></Route>
+            <Route path="/list" render={()=>import('../containers/List')}></Route>
+            <Route path="/404" render={()=>Page404}></Route>
+        </RouterList>
     );
 }
