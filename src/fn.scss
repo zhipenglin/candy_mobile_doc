@@ -8,3 +8,19 @@
     content:$code;
   }
 }
+@mixin bg($url,$width:auto,$height:auto){
+  width: $width;
+  height: $height;
+  background-image: $url;
+  background-size: $width $height;
+}
+@mixin position($x:0,$y:0){
+  position: absolute;
+  left:$x;
+  top:$y;
+}
+@mixin ellipsis(){
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}

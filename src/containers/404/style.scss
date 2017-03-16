@@ -1,0 +1,17 @@
+@import "../../fn";
+
+.ct-page--404{
+  text-align: center;
+  padding-top: 200px;
+  font-size: 40px;
+  color:#ff8331;
+  .candy-mob-button{
+    font-size: 40px;
+    text-decoration: underline;
+  }
+  .icon{
+    display: block;
+    @include bg(url('./404.svg'),400px,400px);
+    margin: 0 auto;
+  }
+}

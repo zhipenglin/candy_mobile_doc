@@ -1124,9 +1124,9 @@ camelcase@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
-candy-mobile@^1.1.7:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/candy-mobile/-/candy-mobile-1.1.7.tgz#694aadabee2a0b834dea6b35a4255411ea772b51"
+candy-mobile@^1.1.9:
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/candy-mobile/-/candy-mobile-1.1.9.tgz#0f8cd2e2e84b3eb0f1700e1ca52afac4d24fc754"
   dependencies:
     blueimp-md5 "^2.5.0"
     classnames "^2.2.5"
