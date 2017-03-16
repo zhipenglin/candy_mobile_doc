@@ -24,11 +24,7 @@ const plugins=[
         }
     }),
     new webpack.NamedModulesPlugin(),
-    new ExtractTextPlugin({
-        filename: "style.[hash:6].css",
-        disable: true,
-        allChunks: true
-    })
+    new ExtractTextPlugin("[name].style.[hash:6].css")
 ];
 
 if(isProd){
