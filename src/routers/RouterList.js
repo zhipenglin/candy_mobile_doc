@@ -37,6 +37,9 @@ export default class RouterList extends PureComponent{
                             activeComponent: mod.default ? mod.default : mod
                         });
                         dispatch(loadingEnd());
+                    },()=>{
+                        new Toast('组件加载失败');
+                        this.props.history.push('/404');
                     });
                 }else{
                     this.setState({
