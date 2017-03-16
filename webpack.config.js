@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin=require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpack=require('webpack');
 const path=require('path');
 
@@ -22,7 +23,12 @@ const plugins=[
             NODE_ENV: JSON.stringify(nodeENV)
         }
     }),
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
+    new ExtractTextPlugin({
+        filename: "style.[hash:6].css",
+        disable: true,
+        allChunks: true
+    })
 ];
 
 if(isProd){
@@ -59,22 +65,30 @@ module.exports={
                 use:'babel-loader'
             },{
                 test:   /\.css/,
-                use: ['style-loader', "css-loader"]
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: "css-loader",
+                    publicPath: distPath
+                })
             },
             {
                 test:   /\.scss/,
-                use: ['style-loader', "css-loader","px2rem-loader", "sass-loader"]
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: ["css-loader","px2rem-loader", "sass-loader"],
+                    publicPath: distPath
+                })
             },
             {
                 test: /\.png$/,
-                use: 'file-loader?name=[md5:hash:base64:10].[ext]'
+                use: 'file-loader?name=[md5:hash:base64:10].[ext]&limit=50000'
             }, {
                 test: /\.jpg$/,
-                use: 'file-loader?name=[md5:hash:base64:10].[ext]'
+                use: 'file-loader?name=[md5:hash:base64:10].[ext]&limit=50000'
             },
             {
                 test: /\.gif$/,
-                use: 'file-loader?name=[name].[ext]'
+                use: 'file-loader?name=[name].[ext]&limit=50000'
             }, {
                 test: /\.json$/,
                 use: 'json'

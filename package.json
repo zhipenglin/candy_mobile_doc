@@ -33,6 +33,7 @@
     "classnames": "^2.2.5",
     "cross-env": "^3.2.3",
     "css-loader": "^0.27.2",
+    "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.10.1",
     "highlight.js": "^9.10.0",
     "history": "^4.6.0",
