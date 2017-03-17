@@ -3,7 +3,7 @@ import{matchPath,withRouter,Route} from 'react-router'
 import {connect} from 'react-redux'
 import {Toast} from 'candy-mobile'
 import {loadingStart,loadingEnd} from '../actions/loadingAction'
-
+import firstOfAll from '../util/firstOfAll'
 @connect()
 @withRouter
 export default class RouterList extends PureComponent{
@@ -24,6 +24,7 @@ export default class RouterList extends PureComponent{
             return matchPath(location.pathname,item.props);
         });
         const {dispatch}=this.props;
+        dispatch(loadingEnd());
         if(matchComponent){
             if(typeof matchComponent.props.render=='function'){
                 let component=matchComponent.props.render();
@@ -32,7 +33,11 @@ export default class RouterList extends PureComponent{
                     this.setState({
                         activeComponent: null
                     });
-                    component.then((mod)=>{
+                    firstOfAll([component,new Promise((resolve,reject)=>{
+                        setTimeout(()=>{
+                            reject();
+                        },10000);
+                    })]).then((mod)=>{
                         this.setState({
                             activeComponent: mod.default ? mod.default : mod
                         });
