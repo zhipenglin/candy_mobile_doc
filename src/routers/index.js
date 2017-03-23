@@ -12,6 +12,7 @@ export default (props)=>{
             <Route path="/dialog" render={()=>import('../containers/Dialog')}></Route>
             <Route path="/list" render={()=>import('../containers/List')}></Route>
             <Route path="/select" render={()=>import('../containers/Select')}></Route>
+            <Route path="/form" render={()=>import('../containers/Form')}></Route>
             <Route path="/404" render={()=>Page404}></Route>
         </RouterList>
     );

@@ -1,7 +1,7 @@
 import {PureComponent} from 'react'
 import {connect} from 'react-redux'
 import {Button,Drawer} from 'candy-mobile'
-import Menu from '../../components/Menu'
+import Menu from './Menu'
 import load from '../../hoc/load'
 import menuListAction from '../../actions/menuListAction'
 import './style.scss'
