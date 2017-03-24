@@ -3,10 +3,36 @@
   top:0;
   left:0;
   width: 100%;
-  z-index: 1000;
+  height: 100%;
+  z-index: 1001;
   &__item{
     width: 0%;
     background-color: rgb(28,188,48);
     height: 8px;
+  }
+}
+.ct-loading-cover{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.1);
+  z-index: 1000;
+  &.loading-cover-animate{
+    &-enter{
+      opacity: 0;
+      transition: opacity 300ms;
+    }
+    &-enter-active{
+      opacity: 1;
+    }
+    &-leave{
+      opacity: 1;
+      transition: opacity 300ms;
+    }
+    &-leave-active {
+      opacity: 0;
+    }
   }
 }
