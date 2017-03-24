@@ -4,7 +4,7 @@ import firstOfAll from './firstOfAll'
 
 const newFetch=function(url,options){
     //`/candy_mobile_doc/api${url}`
-    return firstOfAll([fetch(`/api${url}`,Object.assign({
+    return firstOfAll([fetch(`/candy_mobile_doc/api${url}`,Object.assign({
         credentials: 'include',
         headers: {'Content-Type':'application/x-www-form-urlencoded'}
     },options)).then(response => response.json(),(err)=>{

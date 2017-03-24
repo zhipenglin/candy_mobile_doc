@@ -2,7 +2,6 @@ import {Component} from 'react'
 import {connect} from 'react-redux'
 import './style.scss'
 import Tween from 'rc-tween-one'
-import Animate from 'rc-animate'
 
 const defaultAnimate={width:'80%',duration:3000};
 
@@ -38,15 +37,10 @@ export default class Loading extends Component{
         }
     }
     render(){
-        return <div>
-            {this.state.show?(
-                <div className="ct-loading">
-                    <Tween animation={this.state.animate} className="ct-loading__item"></Tween>
-                </div>
-            ):null}
-            <Animate transitionName="loading-cover-animate">
-                {this.state.show?<div className="ct-loading-cover"></div>:null}
-            </Animate>
-        </div>;
+        return this.state.show?(
+            <div className="ct-loading">
+                <Tween animation={this.state.animate} className="ct-loading__item"></Tween>
+            </div>
+        ):null;
     }
 }
