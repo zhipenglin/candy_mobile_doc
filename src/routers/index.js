@@ -1,4 +1,4 @@
-import {Route,Switch,Redirect} from 'react-router'
+import {Route} from 'react-router'
 import Home from '../containers/Home'
 import Page404 from '../containers/404'
 import RouterList from './RouterList'
