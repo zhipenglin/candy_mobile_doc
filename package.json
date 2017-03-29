@@ -29,7 +29,7 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.22.0",
-    "candy-mobile": "^1.1.21",
+    "candy-mobile": "^1.1.22",
     "classnames": "^2.2.5",
     "cross-env": "^3.2.3",
     "css-loader": "^0.27.2",
