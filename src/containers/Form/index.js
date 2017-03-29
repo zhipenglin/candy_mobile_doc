@@ -1,7 +1,7 @@
 import Page from '../Page'
 import Code from '../../components/Code'
 import { withRouter } from 'react-router'
-import {Form,Input,SelectField,SelectDateField,SelectDateTimeField,SelectTimeField,SubmitButton,Toast,SwitchField} from 'candy-mobile'
+import {Form,Input,SelectField,SelectDateField,SelectDateTimeField,SelectTimeField,SubmitButton,Toast,SwitchField,CheckList} from 'candy-mobile'
 export default withRouter(({history})=>{
     return (
         <Page>
@@ -45,6 +45,8 @@ export default withRouter(({history})=>{
     <SelectDateField name="date" label="出生日期"></SelectDateField>
     <SelectDateTimeField name="date_time" label="报名时间"></SelectDateTimeField>
     <SelectTimeField name="time" label="开始时间"></SelectTimeField>
+    <CheckList name="eat" label="爱吃">{['牛奶','香蕉']}</CheckList>
+    <CheckList name="like" label="爱玩" mult>{['游戏','睡觉']}</CheckList>
     <SubmitButton loadingText="正在提交表单...">完成</SubmitButton>
 </Form>
             `}</Code>
@@ -72,6 +74,8 @@ export default withRouter(({history})=>{
                 <SelectDateField name="date" label="出生日期"></SelectDateField>
                 <SelectDateTimeField name="date_time" label="报名时间"></SelectDateTimeField>
                 <SelectTimeField name="time" label="开始时间"></SelectTimeField>
+                <CheckList name="eat" label="爱吃">{['牛奶','香蕉']}</CheckList>
+                <CheckList name="like" label="爱玩" mult>{['游戏','睡觉']}</CheckList>
                 <SubmitButton loadingText="正在提交表单...">完成</SubmitButton>
             </Form>
             <div className="ct-page__title">inline表单：</div>
@@ -114,6 +118,8 @@ export default withRouter(({history})=>{
     <SelectDateField name="date" label="出生日期"></SelectDateField>
     <SelectDateTimeField name="date_time" label="报名时间"></SelectDateTimeField>
     <SelectTimeField name="time" label="开始时间"></SelectTimeField>
+    <CheckList name="eat" label="爱吃">{['牛奶','香蕉']}</CheckList>
+    <CheckList name="like" label="爱玩" mult>{['游戏','睡觉']}</CheckList>
     <SubmitButton loadingText="正在提交表单...">完成</SubmitButton>
 </Form>
             `}</Code>
@@ -141,6 +147,8 @@ export default withRouter(({history})=>{
                 <SelectDateField name="date" label="出生日期"></SelectDateField>
                 <SelectDateTimeField name="date_time" label="报名时间"></SelectDateTimeField>
                 <SelectTimeField name="time" label="开始时间"></SelectTimeField>
+                <CheckList name="eat" label="爱吃">{['牛奶','香蕉']}</CheckList>
+                <CheckList name="like" label="爱玩" mult>{['游戏','睡觉']}</CheckList>
                 <SubmitButton loadingText="正在提交表单...">完成</SubmitButton>
             </Form>
         </Page>
